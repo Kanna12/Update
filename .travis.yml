@@ -14,15 +14,14 @@ os:
 
 env:
   global:
-    - ELECTRON_CACHE=$HOME/.cache/electron
-    - ELECTRON_BUILDER_CACHE=$HOME/.cache/electron-builder
+    - ELECTRON_CACHE=/c/Users/KannaBhargav/Desktop/Update/node_modules/electron
+    - ELECTRON_BUILDER_CACHE=/c/Users/KannaBhargav/Desktop/Update/node_modules/electron-builder
 
 cache:
   yarn: true
   directories:
-    - $HOME/.cache/electron
-    - $HOME/.cache/electron-builder
-    - $HOME/.npm/_prebuilds
+    - /c/Users/KannaBhargav/Desktop/Update/node_modules/electron
+    - /c/Users/KannaBhargav/Desktop/Update/node_modules/electron-builder
 
 addons:
   chrome: stable # have Travis install chrome stable.
