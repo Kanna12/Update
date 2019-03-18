@@ -4,10 +4,7 @@
   "description": "Love for NodeJS",
   "main": "main.js",
   "scripts": {
-    "start": "electron .",
-    "pack": "electron-builder --dir",
-    "dist": "electron-builder",
-    "schema": ""
+    "start": "electron-builder"
   },
   "repository": {
     "type": "git",
