@@ -26,9 +26,9 @@ os:
 #addons:
  # chrome: stable # have Travis install chrome stable.
 
-#install:
+install:
  # - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then brew install npm; fi
-  #- npm
+  - npm install
 
 script:
 #- echo "Unit Tests"
@@ -48,4 +48,4 @@ script:
 
 #before_cache:
  # - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then rm -rf $HOME/.cache/electron-builder/wine; fi
- - npm run electron-builder
+    - npm run electron-builder
