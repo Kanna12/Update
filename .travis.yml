@@ -5,32 +5,16 @@ osx_image: xcode10.2
 # See https://github.com/travis-ci/travis-ci/issues/8836
 sudo: required
 
-language: html
-html:
-
-os:
-  #- linux
-  - win
-
-#env:
- # global:
-   # - ELECTRON_CACHE=/c/Users/KannaBhargav/Desktop/Update/node_modules/electron
-  #  - ELECTRON_BUILDER_CACHE=/c/Users/KannaBhargav/Desktop/Update/node_modules/electron-builder
-
-#cache:
-  #yarn: true
-  #directories:
-  #  - /c/Users/KannaBhargav/Desktop/Update/node_modules/electron
-   # - /c/Users/KannaBhargav/Desktop/Update/node_modules/electron-builder
-
-#addons:
- # chrome: stable # have Travis install chrome stable.
+language: node_js
+node_js:
+  - "stable"
+os: osx
 
 install:
- # - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then brew install npm; fi
-  - npm install electron-builder
+  - npm install -g electron electron-builder electron-packager
 
 script:
+  - npm run package-mac
 #- echo "Unit Tests"
 #- if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then xvfb-run yarn test; else yarn test; fi
 
@@ -48,4 +32,4 @@ script:
 
 #before_cache:
  # - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then rm -rf $HOME/.cache/electron-builder/wine; fi
-    - npm run 
+#    - npm run 
