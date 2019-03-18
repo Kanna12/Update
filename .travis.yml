@@ -9,8 +9,8 @@ language: html
 html:
 
 os:
-  # - linux
-  - osx
+  - linux
+  #- osx
 
 env:
   global:
