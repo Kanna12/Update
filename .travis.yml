@@ -1,9 +1,9 @@
 osx_image: xcode10.2
 
-dist: trusty # needs Ubuntu Trusty
+#dist: trusty # needs Ubuntu Trusty
 # Note: if you switch to sudo: false, you'll need to launch chrome with --no-sandbox.
 # See https://github.com/travis-ci/travis-ci/issues/8836
-sudo: required
+#sudo: required
 
 language: html
 html:
@@ -32,17 +32,17 @@ install:
   - yarn
 
 script:
-/- echo "Unit Tests"
-/- if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then xvfb-run yarn test; else yarn test; fi
+#- echo "Unit Tests"
+#- if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then xvfb-run yarn test; else yarn test; fi
 
-/- echo "E2E Tests"
-/- if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then xvfb-run yarn test:electron; else yarn test:electron; fi
+#- echo "E2E Tests"
+#- if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then xvfb-run yarn test:electron; else yarn test:electron; fi
 
-/- echo "Deploy linux version to GitHub"
-/- if [[ "$TRAVIS_BRANCH" == "master" ]] && [[ "$TRAVIS_OS_NAME" == "linux" ]]; then yarn release:linux; fi
+#- echo "Deploy linux version to GitHub"
+#- if [[ "$TRAVIS_BRANCH" == "master" ]] && [[ "$TRAVIS_OS_NAME" == "linux" ]]; then yarn release:linux; fi
 
-/- echo "Deploy windows version to GitHub"
-/- if [[ "$TRAVIS_BRANCH" == "master" ]] && [[ "$TRAVIS_OS_NAME" == "osx" ]]; then yarn release:win; fi
+#- echo "Deploy windows version to GitHub"
+#- if [[ "$TRAVIS_BRANCH" == "master" ]] && [[ "$TRAVIS_OS_NAME" == "osx" ]]; then yarn release:win; fi
 
 - echo "Deploy mac version to GitHub"
 - if [[ "$TRAVIS_BRANCH" == "master" ]] && [[ "$TRAVIS_OS_NAME" == "osx" ]]; then yarn release:mac; fi
