@@ -1,4 +1,4 @@
-{
+﻿{
   "name": "Bingo",
   "version": "1.0.5",
   "description": "Love for NodeJS",
@@ -8,7 +8,6 @@
     "pack": "electron-builder --dir",
     "dist": "electron-builder",
     "postinstall": "electron-builder install-app-deps",
-    "release": "build",
     "schema": ""
   },
   "repository": {
