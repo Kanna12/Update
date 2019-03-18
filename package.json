@@ -1,4 +1,4 @@
-{
+﻿{
   "name": "Bingo",
   "version": "1.0.5",
   "description": "Love for NodeJS",
@@ -14,7 +14,6 @@
     "url": "git@github.com:Kanna12/Update.git"
   },
   "author": "Goku",
-  "license": "CC0-1.0",
   "devDependencies": {
     "electron": "^3.0.9",
     "electron-builder": "^20.36.2"
@@ -32,7 +31,8 @@
     ]
   },
   "dependencies": {
-    "electron-updater": "^4.0.4"
+    "electron-updater": "^4.0.4",
+    "yarn": "^1.13.0"
   },
   "bugs": {
     "url": "https://github.com/Kanna12/issues"
