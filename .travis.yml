@@ -9,7 +9,7 @@ language: html
 html:
 
 os:
-  - linux
+  # - linux
   - osx
 
 env:
@@ -43,8 +43,9 @@ script:
 #- echo "Deploy windows version to GitHub"
 #- if [[ "$TRAVIS_BRANCH" == "master" ]] && [[ "$TRAVIS_OS_NAME" == "osx" ]]; then yarn release:win; fi
 
-- echo "Deploy mac version to GitHub"
-- if [[ "$TRAVIS_BRANCH" == "master" ]] && [[ "$TRAVIS_OS_NAME" == "osx" ]]; then dist release:mac; fi
+#- echo "Deploy mac version to GitHub"
+#- if [[ "$TRAVIS_BRANCH" == "master" ]] && [[ "$TRAVIS_OS_NAME" == "osx" ]]; then dist release:mac; fi
 
-before_cache:
-  - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then rm -rf $HOME/.cache/electron-builder/wine; fi
+#before_cache:
+ # - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then rm -rf $HOME/.cache/electron-builder/wine; fi
+npm run build
