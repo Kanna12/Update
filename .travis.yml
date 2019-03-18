@@ -28,7 +28,6 @@ os:
 
 install:
  # - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then brew install npm; fi
-  - npm install
   - npm install electron-builder
 
 script:
