@@ -1,4 +1,4 @@
-﻿{
+{
   "name": "Bingo",
   "version": "1.0.5",
   "description": "Love for NodeJS",
@@ -7,7 +7,6 @@
     "start": "electron .",
     "pack": "electron-builder --dir",
     "dist": "electron-builder",
-    "postinstall": "electron-builder install-app-deps",
     "schema": ""
   },
   "repository": {
@@ -33,8 +32,7 @@
     ]
   },
   "dependencies": {
-    "electron-updater": "^4.0.4",
-    "yarn": "^1.13.0"
+    "electron-updater": "^4.0.4"
   },
   "bugs": {
     "url": "https://github.com/Kanna12/issues"
