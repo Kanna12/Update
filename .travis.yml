@@ -29,6 +29,8 @@ os:
 install:
  # - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then brew install npm; fi
   - npm install
+  - npm install electron
+  - npm install electron-builder
 
 script:
 #- echo "Unit Tests"
@@ -48,4 +50,4 @@ script:
 
 #before_cache:
  # - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then rm -rf $HOME/.cache/electron-builder/wine; fi
-    - npm run build
+    - npm run 
