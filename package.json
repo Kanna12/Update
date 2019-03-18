@@ -1,4 +1,4 @@
-{
+﻿{
   "name": "Bingo",
   "version": "1.0.5",
   "description": "Love for NodeJS",
@@ -8,6 +8,8 @@
     "pack": "electron-builder --dir",
     "dist": "electron-builder",
     "postinstall": "electron-builder install-app-deps",
+    "release": "yarn set-versions && BABEL_ENV=production yarn compile && sh ./__publish.sh && conventional-changelog -p angular -i CHANGELOG.md -s",
+    "schema": "",
     "release": "build"
   },
   "repository": {
