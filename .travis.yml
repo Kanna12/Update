@@ -10,7 +10,7 @@ html:
 
 os:
   #- linux
-  - osx
+  - win
 
 #env:
  # global:
