@@ -22,6 +22,8 @@ script:
   #- ls -ltr .
   #- git add ./release-builds
   #- git commit -m "Build successful 1.0.0"
+  - git config --global user.name "kanna12"
+  - git config --global user.email "kgoku98@gmail.com"
   - git push origin master
   
 deploy:
