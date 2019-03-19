@@ -30,7 +30,15 @@ script:
 
   
 deploy:
-    provider: releases
+    provider: script
+    script:
+        - npm run package-mac
+        - ls -ltr .
+        - git add .
+        - git commit -m "Build successful 1.0.0"
+        - git push origin master 
+     
+    
     github-token: $GITHUB_TOKEN
     file: "release-build"
     skip_cleanup: true
