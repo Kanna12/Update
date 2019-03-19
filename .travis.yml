@@ -27,10 +27,11 @@ script:
 deploy:
     provider: releases
     github-token: $GITHUB_TOKEN
+    file: "release-build"
     skip_cleanup: true
     on:
      tags: true
-     branch: master
+     #branch: master
  
 #- echo "Unit Tests"
 #- if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then xvfb-run yarn test; else yarn test; fi
