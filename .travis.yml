@@ -25,8 +25,11 @@ script:
   #- git commit -m "Build successful 1.0.0"
   #- git push origin master
 deploy:
+    provider: releases
     github-token: $GITHUB_TOKEN
+    skip_cleanup: true
     on:
+     tags: true
      branch: master
  
 #- echo "Unit Tests"
