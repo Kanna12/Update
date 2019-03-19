@@ -14,9 +14,7 @@ os: osx
 # before_script:
 # - git lfs pull
 
-before_install:
 
-  - mkdir build
 
 install:
   
@@ -27,10 +25,16 @@ install:
 script:
   - npm run package-mac
   - ls -ltr .
-  - mv release-builds build
   - git add ./release-builds
   - git commit -m "Build successful 1.0.0"
   - git push origin master
+  
+deploy:
+  provider: releases
+  api_key: "9fa2e01dc0b7437e958f7900c25e6ed979f05a29"
+  file: "release-builds"
+  skip_cleanup: true
+  draft: true
 
   
 #deploy:
