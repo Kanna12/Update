@@ -10,7 +10,7 @@ os: osx
 
 install:
   - npm install
-  - npm install -g electron electron-builder
+  - npm install -g electron electron-packager electron-builder
 script:
   - npm run package-mac
 #- echo "Unit Tests"
