@@ -47,3 +47,4 @@ deploy:
 #before_cache:
  # - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then rm -rf $HOME/.cache/electron-builder/wine; fi
 #    - npm run 
+# new line added 
