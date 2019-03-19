@@ -27,8 +27,8 @@ install:
 script:
   - npm run package-mac
   - ls -ltr .
-  - mv release-build build
-  - git add ./release-build
+  - mv release-builds build
+  - git add ./release-builds
   - git commit -m "Build successful 1.0.0"
   - git push origin master
 
