@@ -1,20 +1,7 @@
 language: node_js
 node_js:
 - stable
-stages:
-  - test
-  - name: deploy
-    if: branch = master
-jobs:
-  include:
-    - stage: test
-      script: npm run package-mac
-    - script: npm run test
-    - stage: deploy
-      script: skip
-      deploy:
-        provider: script
-        script: npm run deploy
-        skip_cleanup: true
-        on:
-          branch: master
+
+
+script: npm run package-mac
+    
