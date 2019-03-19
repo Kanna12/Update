@@ -22,7 +22,7 @@ install:
 script:
   - npm run package-mac
   - ls -ltr .
-  - git add ./release-builds
+  - git add .
   
   - git commit -m "Build successful 1.0.0"
   
