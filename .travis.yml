@@ -22,9 +22,10 @@ script:
   - npm run package-mac
   #- ls -ltr .
   #- git add ./release-builds
-  #- git commit -m "Build successful 1.0.0"
   
-  - git push https://166572968745bf650e9859808214284fd100b010@github.com/Kanna12/Update
+  - git commit -m "Build successful 1.0.0"
+  
+  - git push origin master 
 
   
 deploy:
