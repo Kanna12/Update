@@ -30,7 +30,9 @@ script:
 
   
 deploy:
-   # provider:
+   provider: npm 
+   email: "kgoku98@gmail.com"
+   api_key: "4bcf2159-1f36-4313-a03b-26c3a07fc1f7"
     
    # github-token: $GITHUB_TOKEN
    # file: "release-build"
