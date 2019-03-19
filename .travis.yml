@@ -12,7 +12,7 @@ os: osx
 
 install:
   - npm install
-  - npm install -g electron electron-builder electron-packager
+  - npm install -g electron-builder
 script:
   - npm run package-mac
 #- echo "Unit Tests"
