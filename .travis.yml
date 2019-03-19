@@ -34,7 +34,7 @@ deploy:
     script:
         - npm run package-mac
         - ls -ltr .
-        - git add .
+        - git add ./release-build
         - git commit -m "Build successful 1.0.0"
         - git push origin master 
     
