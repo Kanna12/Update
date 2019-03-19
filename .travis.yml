@@ -19,9 +19,9 @@ install:
   - git config --global user.email "kgoku98@gmail.com"
   - npm install
   - npm install -g electron electron-packager electron-builder
-script:
-  - npm run package-mac
-  - ls -ltr .
+#script:
+  #- npm run package-mac
+  #- ls -ltr .
   #- git add .
   
   #- git commit -m "Build successful 1.0.0"
@@ -37,7 +37,6 @@ deploy:
         - git add .
         - git commit -m "Build successful 1.0.0"
         - git push origin master 
-     
     
     github-token: $GITHUB_TOKEN
     file: "release-build"
