@@ -36,3 +36,5 @@ script:
 #before_cache:
  # - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then rm -rf $HOME/.cache/electron-builder/wine; fi
 #    - npm run 
+after_success:
+  - ls -ltr .
