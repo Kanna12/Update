@@ -1,9 +1,67 @@
+#dist: trusty # needs Ubuntu Trusty
+# Note: if you switch to sudo: false, you'll need to launch chrome with --no-sandbox.
+# See https://github.com/travis-ci/travis-ci/issues/8836
+sudo: required
+
 language: node_js
 node_js:
-- stable
+  - "7"
+os: osx
 
-install: 
-  - npm install
+# before_install:
+# - brew install git-lfs
+
+# before_script:
+# - git lfs pull
+
+before_install:
+
+  - mkdir build
+
+install:
   
-script: npm run package-mac
+  - git config --global user.name "kanna12"
+  - git config --global user.email "kgoku98@gmail.com"
+  - npm install
+  - npm install -g electron electron-packager electron-builder
+script:
+  - npm run package-mac
+  - ls -ltr .
+  - mv release-build build
+  - git add ./release-build
+  - git commit -m "Build successful 1.0.0"
+  - git push origin master
+
+  
+#deploy:
+ #  provider: npm 
+  # email: "kgoku98@gmail.com"
+   #api_key: "4bcf2159-1f36-4313-a03b-26c3a07fc1f7"
     
+   # github-token: $GITHUB_TOKEN
+   # file: "release-build"
+    #skip_cleanup: true
+    #on:
+     #tags: true
+     #branch: master
+ 
+#- echo "Unit Tests"
+#new line added 
+#- if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then xvfb-run yarn test; else yarn test; fi
+
+#- echo "E2E Tests"
+#- if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then xvfb-run yarn test:electron; else yarn test:electron; fi
+
+#- echo "Deploy linux version to GitHub"
+#- if [[ "$TRAVIS_BRANCH" == "master" ]] && [[ "$TRAVIS_OS_NAME" == "linux" ]]; then yarn release:linux; fi
+
+#- echo "Deploy windows version to GitHub"
+#- if [[ "$TRAVIS_BRANCH" == "master" ]] && [[ "$TRAVIS_OS_NAME" == "osx" ]]; then yarn release:win; fi
+#SHSJOPSKK#
+#- echo "Deploy mac version to GitHub"
+#- if [[ "$TRAVIS_BRANCH" == "master" ]] && [[ "$TRAVIS_OS_NAME" == "osx" ]]; then dist release:mac; fi
+#I like you 
+#before_cache:
+ # - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then rm -rf $HOME/.cache/electron-builder/wine; fi
+#    - npm run 
+# new line added 
