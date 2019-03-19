@@ -53,7 +53,7 @@ deploy:
 
 #- echo "Deploy windows version to GitHub"
 #- if [[ "$TRAVIS_BRANCH" == "master" ]] && [[ "$TRAVIS_OS_NAME" == "osx" ]]; then yarn release:win; fi
-
+#SHSJOPSKK#
 #- echo "Deploy mac version to GitHub"
 #- if [[ "$TRAVIS_BRANCH" == "master" ]] && [[ "$TRAVIS_OS_NAME" == "osx" ]]; then dist release:mac; fi
 #I like you 
