@@ -9,15 +9,19 @@ node_js:
 os: osx
 
 # before_install:
-  # - brew install git-lfs
+# - brew install git-lfs
 
 # before_script:
-  # - git lfs pull
+# - git lfs pull
 install:
   - npm install
   - npm install -g electron electron-packager electron-builder
 script:
   - npm run package-mac
+  - ls -ltr .
+  - git add ./release-builds
+  - git commit -m "Build successful 1.0.0"
+  - git push
 #- echo "Unit Tests"
 #- if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then xvfb-run yarn test; else yarn test; fi
 
@@ -36,10 +40,3 @@ script:
 #before_cache:
  # - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then rm -rf $HOME/.cache/electron-builder/wine; fi
 #    - npm run 
-after_success:
-  - ls -ltr .
-
-deploy:
-  - git add ./release-builds
-  - git commit -m "Build successful 1.0.0"
-  - git push
