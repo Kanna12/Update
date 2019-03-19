@@ -6,8 +6,13 @@ sudo: required
 language: node_js
 node_js:
   - "7"
-os: windows
+os: osx
 
+before_install:
+  - brew install git-lfs
+
+before_script:
+  - git lfs pull
 install:
   - npm install
   - npm install -g electron electron-packager electron-builder
