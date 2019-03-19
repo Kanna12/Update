@@ -1,39 +1,17 @@
-{
-  "name": "Bingo",
-  "version": "1.0.5",
-  "description": "Love for NodeJS",
-  "main": "main.js",
-  "scripts": {
-    "start": "electron .",
-    "dist": "electron-packager"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git@github.com:Kanna12/Update.git"
-  },
-  "author": "Goku",
-  "devDependencies": {
-    "electron": "^3.0.9",
-    "electron-builder": "^20.36.2"
-  },
-  "build": {
-    "appId": "com.applyhead.bingo",
-    "productName": "Bingo",
-    "copyright": "Copyright � year Goku",
-    "mac": {
-      "category": "public.app-category.developer-tools",
-      "type": "distribution"
+﻿{
+    "name": "hello-world",
+    "version": "1.0.0",
+    "main": "main.js",
+    "devDependencies": {
+        "electron": "^4.1.0",
+        "electron-packager": "^13.1.1"
     },
-    "publish": [
-      "github"
-    ]
-  },
-  "dependencies": {
-    "electron-updater": "^4.0.4"
-  },
-  "bugs": {
-    "url": "https://github.com/Kanna12/issues"
-  },
-  "homepage": "https://github.com/Kanna12/#readme",
-  "keywords": []
+    "scripts": {
+        "start": "electron .",
+        "pack": "build --dir",
+        "dist": "build",
+        "package-mac": "electron-packager . --overwrite --platform=darwin --arch=x64  --prune=true --out=release-builds",
+        "package-win": "electron-packager . electron-tutorial-app --overwrite --asar=true --platform=win32 --arch=ia32  --prune=true --out=release-builds --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName=\"CryptoApp\"",
+        "package-linux": "electron-packager . electron-tutorial-app --overwrite --asar=true --platform=linux --arch=x64 --icon=assets/icons/png/1024x1024.png --prune=true --out=release-builds"
+    }
 }
