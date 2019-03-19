@@ -19,28 +19,22 @@ install:
   - git config --global user.email "kgoku98@gmail.com"
   - npm install
   - npm install -g electron electron-packager electron-builder
-#script:
+script:
   - npm run package-mac
   - ls -ltr .
   - git add .
   
   - git commit -m "Build successful 1.0.0"
   
-  - git push origin master 
+  - git push . 
 
   
 deploy:
-    provider: script
-    script:
-        - npm run package-mac
-        - ls -ltr .
-        - git add ./release-build
-        - git commit -m "Build successful 1.0.0"
-        - git push origin master 
+   # provider:
     
-    github-token: $GITHUB_TOKEN
-    file: "release-build"
-    skip_cleanup: true
+   # github-token: $GITHUB_TOKEN
+   # file: "release-build"
+    #skip_cleanup: true
     on:
      tags: true
      branch: release
