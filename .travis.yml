@@ -18,17 +18,12 @@ install:
   - npm install
   - npm install -g electron electron-packager electron-builder
 script:
-  - npm run 
-  - ls -ltr .
-  - git add ./release-builds
-  - git commit -m "Build successful 1.0.0"
-  - git push origin master
- before_deploy:
-      # Set up git user name and tag this commit
-      - git config --local user.name "kanna12"
-      - git config --local user.email "kgoku98@gmail.com"
-      - export TRAVIS_TAG=${TRAVIS_TAG:-$(date +'%Y%m%d%H%M%S')-$(git log --format=%h -1)}
-      - git tag $TRAVIS_TAG
+  - npm run package-mac
+  #- ls -ltr .
+  #- git add ./release-builds
+  #- git commit -m "Build successful 1.0.0"
+  #- git push origin master
+  
 deploy:
     provider: releases
     github-token: $GITHUB_TOKEN
