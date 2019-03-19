@@ -6,7 +6,7 @@ sudo: required
 language: node_js
 node_js:
   - "stable"
-os: osx
+os: win
 
 install:
   - npm install
