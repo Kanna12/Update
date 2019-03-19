@@ -5,7 +5,7 @@ sudo: required
 
 language: node_js
 node_js:
-  - "stable"
+  - "7"
 os: windows
 
 install:
