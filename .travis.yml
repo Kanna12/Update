@@ -14,8 +14,8 @@ os: osx
 # before_script:
 # - git lfs pull
 install:
-  #- git config --global user.name "kanna12"
-  #- git config --global user.email "kgoku98@gmail.com"
+  - git config --global user.name "kanna12"
+  - git config --global user.email "kgoku98@gmail.com"
   - npm install
   - npm install -g electron electron-packager electron-builder
 script:
