@@ -14,8 +14,8 @@ os: osx
 # before_script:
 # - git lfs pull
 install:
-  - git config --global user.name "kanna12"
-  - git config --global user.email "kgoku98@gmail.com"
+  #- git config --global user.name "kanna12"
+  #- git config --global user.email "kgoku98@gmail.com"
   - npm install
   - npm install -g electron electron-packager electron-builder
 script:
@@ -24,6 +24,11 @@ script:
   - git add ./release-builds
   - git commit -m "Build successful 1.0.0"
   - git push origin master
+deploy:
+    github-token: $GITHUB_TOKEN
+    on:
+     branch: master
+ 
 #- echo "Unit Tests"
 #- if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then xvfb-run yarn test; else yarn test; fi
 
