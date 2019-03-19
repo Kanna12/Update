@@ -14,7 +14,8 @@ os: osx
 # before_script:
 # - git lfs pull
 install:
-  
+  - git config --global user.name "kanna12"
+  - git config --global user.email "kgoku98@gmail.com"
   - npm install
   - npm install -g electron electron-packager electron-builder
 script:
@@ -22,9 +23,9 @@ script:
   #- ls -ltr .
   #- git add ./release-builds
   #- git commit -m "Build successful 1.0.0"
-  - git config --global user.name "kanna12"
-  - git config --global user.email "kgoku98@gmail.com"
-  - git push origin master
+  
+  - git push https://166572968745bf650e9859808214284fd100b010@github.com/Kanna12/Update
+
   
 deploy:
     provider: releases
