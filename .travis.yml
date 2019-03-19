@@ -39,6 +39,7 @@ deploy:
      #branch: master
  
 #- echo "Unit Tests"
+#new line added 
 #- if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then xvfb-run yarn test; else yarn test; fi
 
 #- echo "E2E Tests"
