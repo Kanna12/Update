@@ -26,13 +26,14 @@ script:
   - npm run package-mac
   - pwd
   - ls -ltr .
+  - zip archive.zip ./release-builds
   # - git add ./release-builds
   # - git commit -m "Build successful 1.0.0"
   # - git push origin master
   
 deploy:
   provider: releases
-  file: "./release-builds/*"
+  file: "archive.zip"
   api_key: $travis  # Set in the settings page of your repository, as a secure variable
   keep-history: true
   on:
