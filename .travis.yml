@@ -32,12 +32,11 @@ script:
 deploy:
   provider: releases
   file: "./release-builds"
-  github-token: $travis  # Set in the settings page of your repository, as a secure variable
+  api_key: $travis  # Set in the settings page of your repository, as a secure variable
   keep-history: true
   on:
     branch: master
   skip_cleanup: true
-  draft: true
 
   
 #deploy:
