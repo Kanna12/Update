@@ -31,7 +31,7 @@ script:
   
 deploy:
   provider: releases
-  api_key: "9fa2e01dc0b7437e958f7900c25e6ed979f05a29"
+  api_key: "59023167978d3c241550513aadae035bf8c377e9"
   file: "release-builds"
   skip_cleanup: true
   draft: true
