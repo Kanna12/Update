@@ -38,7 +38,7 @@ deploy:
   keep-history: true
   
   on:
-   repo: Update/release-builds
+  repo: release-builds
   skip_cleanup: true
   all_branches: true
   tags: true
