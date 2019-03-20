@@ -36,10 +36,12 @@ deploy:
   file: "archive.zip"
   api_key: $travis  # Set in the settings page of your repository, as a secure variable
   keep-history: true
+  
+  on:
+   repo: Update/release-builds
   skip_cleanup: true
   all_branches: true
-  on:
-    tags: true
+  tags: true
  
 
   # trying new things
