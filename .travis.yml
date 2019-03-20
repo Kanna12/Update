@@ -38,7 +38,7 @@ deploy:
   keep-history: true
   
   on:
-  repo: release-builds
+  repo: Kanna12/Update
   skip_cleanup: true
   all_branches: true
   tags: true
